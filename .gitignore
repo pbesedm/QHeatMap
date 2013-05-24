@@ -2,12 +2,18 @@
 *.slo
 *.lo
 *.o
+moc_*
 
 # Compiled Dynamic libraries
 *.so
+*.so.*
 *.dylib
 
 # Compiled Static libraries
 *.lai
 *.la
 *.a
+
+Makefile
+QHeatMap
+test/test
