@@ -6,7 +6,7 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 23:06:27 2013
- * Modified at:   Sat May 25 09:50:39 2013
+ * Modified at:   Sat May 25 12:17:11 2013
  * Description:   
  *==================================================================*/
 #ifndef _HEATMAPPER_H_
@@ -29,12 +29,18 @@ public:
 	void save(const QString &fname);
 	void addPoint(int x, int y);
 	void setPalette(GradientPalette *palette);
-	
-	virtual void drawAlpha(int x, int y, int count);
-	virtual void colorize(int x, int y);
+	int  getCount(int x, int y);
+	void colorize(int x, int y);
+	void colorize();
 
+	virtual void drawAlpha(int x, int y, int count, bool colorize_now = true);
+	
+protected:
+	virtual void colorize(int left, int top, int right, int bottom);
+	void redraw();
+	
 private:
-	inline int increase(int x, int y, int delta = 1);
+	int increase(int x, int y, int delta = 1);
 	
 private:
 	// 存储点频率的数组，大小和图像一样

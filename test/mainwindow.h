@@ -6,7 +6,7 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 22:20:02 2013
- * Modified at:   Sat May 25 10:15:12 2013
+ * Modified at:   Sat May 25 10:54:24 2013
  * Description:   
  *==================================================================*/
 #ifndef _MAINWINDOW_H_
@@ -25,8 +25,8 @@ class MainWindow : public QWidget
 {
 public:
 	enum {
-		CANVAS_WIDTH = 1024,
-		CANVAS_HEIGHT = 768,
+		CANVAS_WIDTH = 1000,
+		CANVAS_HEIGHT = 700,
 		DEFAULT_RADIUS = 60,
 		DEFAULT_OPACITY = 128,
 		DEFAULT_WIDTH = 255
