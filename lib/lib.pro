@@ -11,4 +11,4 @@ MOC_DIR += /tmp
 OBJECTS_DIR += /tmp
 
 # Input
-SOURCES += heatmapper.cpp
+SOURCES += heatmapper.cpp ./gradientpalette.cpp

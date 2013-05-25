@@ -11,5 +11,5 @@ MOC_DIR += /tmp
 OBJECTS_DIR += /tmp
 
 # Input
-HEADERS += mainwindow.h ../include/heatmapper.h
-SOURCES += main.cpp mainwindow.cpp ../lib/heatmapper.cpp
+HEADERS += mainwindow.h ../include/heatmapper.h ../include/gradientpalette.h
+SOURCES += main.cpp mainwindow.cpp ../lib/heatmapper.cpp ../lib/gradientpalette.cpp

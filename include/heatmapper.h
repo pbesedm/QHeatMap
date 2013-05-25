@@ -6,7 +6,7 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 23:06:27 2013
- * Modified at:   Sat May 25 02:24:03 2013
+ * Modified at:   Sat May 25 09:50:39 2013
  * Description:   
  *==================================================================*/
 #ifndef _HEATMAPPER_H_
@@ -18,15 +18,18 @@ QT_BEGIN_NAMESPACE
 class QImage;
 QT_END_NAMESPACE
 
+class GradientPalette;
+
 class HeatMapper
 {
 public:
-    HeatMapper(QImage *image, int radius, int opacity);
+    HeatMapper(QImage *image, GradientPalette *palette, int radius, int opacity);
 	virtual ~HeatMapper();
 
 	void save(const QString &fname);
-
 	void addPoint(int x, int y);
+	void setPalette(GradientPalette *palette);
+	
 	virtual void drawAlpha(int x, int y, int count);
 	virtual void colorize(int x, int y);
 
@@ -40,6 +43,8 @@ private:
 	QImage *alphaCanvas_;
 	// 用于显示输出的图像
 	QImage *mainCanvas_;
+	// 调色板
+	GradientPalette *palette_;
 	// 半径
 	int radius_;
 	// 不透明度

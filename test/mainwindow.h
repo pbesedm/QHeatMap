@@ -6,7 +6,7 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 22:20:02 2013
- * Modified at:   Fri May 24 20:51:11 2013
+ * Modified at:   Sat May 25 10:15:12 2013
  * Description:   
  *==================================================================*/
 #ifndef _MAINWINDOW_H_
@@ -19,6 +19,7 @@ class QImage;
 QT_END_NAMESPACE
 
 class HeatMapper;
+class GradientPalette;
 
 class MainWindow : public QWidget
 {
@@ -27,7 +28,8 @@ public:
 		CANVAS_WIDTH = 1024,
 		CANVAS_HEIGHT = 768,
 		DEFAULT_RADIUS = 60,
-		DEFAULT_OPACITY = 128
+		DEFAULT_OPACITY = 128,
+		DEFAULT_WIDTH = 255
 	};
 	
     explicit MainWindow(QWidget *parent = 0);
@@ -42,6 +44,8 @@ private:
 	HeatMapper *mapper_;
 	// 用于显示输出的图像
 	QImage *canvas_;
+	// 调色板
+	GradientPalette *palette_;
 };
 
 #endif /* _MAINWINDOW_H_ */
