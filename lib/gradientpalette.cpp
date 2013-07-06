@@ -6,7 +6,7 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Sat May 25 08:45:12 2013
- * Modified at:   Sat May 25 13:14:24 2013
+ * Modified at:   Sat Jul  6 13:30:56 2013
  * Description:   
  *==================================================================*/
 #include "gradientpalette.h"
@@ -52,6 +52,7 @@ void GradientPalette::setColorAt(qreal index, const QColor &color)
 /*
  * 获得指定点颜色值
  * @param index 取值位置
+ * @return 返回指定索引处的颜色值
  */
 QColor GradientPalette::getColorAt(qreal index)
 {
