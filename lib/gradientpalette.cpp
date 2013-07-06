@@ -6,7 +6,7 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Sat May 25 08:45:12 2013
- * Modified at:   Sat May 25 12:50:15 2013
+ * Modified at:   Sat May 25 13:14:24 2013
  * Description:   
  *==================================================================*/
 #include "gradientpalette.h"

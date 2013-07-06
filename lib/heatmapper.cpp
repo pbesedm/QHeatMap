@@ -6,7 +6,7 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 23:39:03 2013
- * Modified at:   Sat May 25 12:43:15 2013
+ * Modified at:   Sat Jul  6 13:27:50 2013
  * Description:   
  *==================================================================*/
 #include "heatmapper.h"
@@ -56,7 +56,7 @@ HeatMapper::~HeatMapper()
 int HeatMapper::increase(int x, int y, int delta)
 {
 	int index = (x - 1) * width_ + (y - 1);
-	data_[index] = data_[index] + delta;
+	data_[index] += delta;
 	return data_[index];
 }
 
@@ -114,6 +114,8 @@ void HeatMapper::redraw()
  */
 void HeatMapper::setPalette(GradientPalette *palette)
 {
+	Q_ASSERT(palette);
+	
 	if (palette)
 		palette_ = palette;
 }
@@ -207,11 +209,10 @@ void HeatMapper::colorize(int left, int top, int right, int bottom)
 				continue;
 			finalAlpha = (alpha < opacity_ ? alpha : opacity_);
 			color = palette_->getColorAt(alpha);
-			mainCanvas_->setPixel(i, j,
-								  qRgba(color.red(),
-										color.green(),
-										color.blue(),
-										finalAlpha));
+			mainCanvas_->setPixel(i, j, qRgba(color.red(),
+											  color.green(),
+											  color.blue(),
+											  finalAlpha));
 		}
 	}
 }
