@@ -6,7 +6,7 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 23:39:03 2013
- * Modified at:   Sat Jul  6 13:27:50 2013
+ * Modified at:   Tue Jul  9 21:49:52 2013
  * Description:   
  *==================================================================*/
 #include "heatmapper.h"
@@ -55,7 +55,7 @@ HeatMapper::~HeatMapper()
  */
 int HeatMapper::increase(int x, int y, int delta)
 {
-	int index = (x - 1) * width_ + (y - 1);
+	int index = (y - 1) * width_ + (x - 1);
 	data_[index] += delta;
 	return data_[index];
 }
