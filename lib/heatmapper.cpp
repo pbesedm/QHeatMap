@@ -6,7 +6,7 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 23:39:03 2013
- * Modified at:   Tue Jul  9 22:20:33 2013
+ * Modified at:   Tue Jul  9 23:45:21 2013
  * Description:   
  *==================================================================*/
 #include "heatmapper.h"
@@ -103,7 +103,7 @@ void HeatMapper::redraw()
 	for (int i = 0; i < size; ++i) {
 		if (0 == data_[i])
 			continue;
-		drawAlpha(i / width_ + 1, i % width_ + 1, data_[i], false);
+		drawAlpha(i % width_ + 1, i / width_ + 1, data_[i], false);
 	}
 	colorize();
 }
@@ -127,7 +127,7 @@ int HeatMapper::getCount(int x, int y)
 {
 	if (x < 0 || y < 0)
 		return 0;
-	return data_[(x - 1) * width_ + (y - 1)];
+	return data_[(y - 1) * width_ + (x - 1)];
 }
 
 /*
