@@ -6,12 +6,13 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 23:06:27 2013
- * Modified at:   Sat May 25 12:17:11 2013
+ * Modified at:   Tue Jul  9 22:06:10 2013
  * Description:   
  *==================================================================*/
 #ifndef _HEATMAPPER_H_
 #define _HEATMAPPER_H_
 
+#include "global.h"
 #include <QVector>
 
 QT_BEGIN_NAMESPACE
@@ -20,7 +21,7 @@ QT_END_NAMESPACE
 
 class GradientPalette;
 
-class HeatMapper
+class QHEATMAP_DLL_EXPORT HeatMapper
 {
 public:
     HeatMapper(QImage *image, GradientPalette *palette, int radius, int opacity);

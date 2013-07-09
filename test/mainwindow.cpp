@@ -6,7 +6,7 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 22:42:06 2013
- * Modified at:   Sat May 25 11:32:01 2013
+ * Modified at:   Tue Jul  9 22:10:59 2013
  * Description:   
  *==================================================================*/
 #include "mainwindow.h"
@@ -42,8 +42,6 @@ MainWindow::~MainWindow()
 {
 	delete mapper_;
 	delete palette_;
-	mapper_ = NULL;
-	palette_ = NULL;
 }
 
 /*
