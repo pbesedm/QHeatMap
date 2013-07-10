@@ -6,13 +6,13 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 22:20:02 2013
- * Modified at:   Sat May 25 10:54:24 2013
+ * Modified at:   Wed Jul 10 19:12:07 2013
  * Description:   
  *==================================================================*/
 #ifndef _MAINWINDOW_H_
 #define _MAINWINDOW_H_
 
-#include <QtGui/QWidget>
+#include <QWidget>
 
 QT_BEGIN_NAMESPACE
 class QImage;

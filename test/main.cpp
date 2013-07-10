@@ -6,10 +6,10 @@
  * Copyright (c) 2013 Dianchun Huang (simpleotter23@gmail.com)
  * 
  * Created at:    Thu May 23 22:42:59 2013
- * Modified at:   Thu May 23 22:43:46 2013
+ * Modified at:   Wed Jul 10 19:11:47 2013
  * Description:   
  *==================================================================*/
-#include <QtGui/QApplication>
+#include <QApplication>
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
