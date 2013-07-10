@@ -10,8 +10,10 @@ TARGET = test
 DEPENDPATH += . ../lib
 INCLUDEPATH += . ../include
 
-MOC_DIR += /tmp
-OBJECTS_DIR += /tmp
+unix: {
+   MOC_DIR += /tmp
+   OBJECTS_DIR += /tmp
+}
 
 # Input
 HEADERS += mainwindow.h ../include/heatmapper.h ../include/gradientpalette.h

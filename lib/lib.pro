@@ -10,8 +10,10 @@ TARGET = qheatmap
 DEPENDPATH += .
 INCLUDEPATH += . ../include/
 
-MOC_DIR += /tmp
-OBJECTS_DIR += /tmp
+unix: {
+   MOC_DIR += /tmp
+   OBJECTS_DIR += /tmp
+}
 
 DEFINES += QHEATMAP_DLL_LIBRARY
 
